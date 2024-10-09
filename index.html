@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="bn" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rayeed Forum</title>
+    <!-- daisyui link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- tailwind css link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="shadow">
+      <div class="container mx-auto py-5">
+        <!-- Navbar -->
+        <div class="navbar flex justify-between bg-base-100">
+          <div class="w-full flex justify-between items-center">
+            <div>
+              <a class="btn btn-ghost text-xl uppercase"
+                ><span class="text-primary font-bold">Rayeed</span>Forum</a
+              >
+            </div>
+            <div class="navbar-end hidden lg:flex">
+              <ul class="menu menu-horizontal px-4 flex items-center gap-4">
+                <li>
+                  <a
+                    class="w-14 h-14 flex items-center justify-center bg-[#f8f8f8] rounded-full tooltip"
+                    data-tip="Home"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M2.25 12.0001L11.204 3.04507C11.644 2.60607 12.356 2.60607 12.795 3.04507L21.75 12.0001M4.5 9.75007V19.8751C4.5 20.4961 5.004 21.0001 5.625 21.0001H9.75V16.1251C9.75 15.5041 10.254 15.0001 10.875 15.0001H13.125C13.746 15.0001 14.25 15.5041 14.25 16.1251V21.0001H18.375C18.996 21.0001 19.5 20.4961 19.5 19.8751V9.75007M8.25 21.0001H16.5"
+                        stroke="#12132D"
+                        stroke-opacity="0.6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="w-14 h-14 flex items-center justify-center bg-[#f8f8f8] rounded-full tooltip"
+                    data-tip="Edit"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M16.862 4.487L18.549 2.799C18.9007 2.44733 19.3777 2.24976 19.875 2.24976C20.3723 2.24976 20.8493 2.44733 21.201 2.799C21.5527 3.15068 21.7502 3.62766 21.7502 4.125C21.7502 4.62235 21.5527 5.09933 21.201 5.451L6.832 19.82C6.30332 20.3484 5.65137 20.7367 4.935 20.95L2.25 21.75L3.05 19.065C3.26328 18.3486 3.65163 17.6967 4.18 17.168L16.863 4.487H16.862ZM16.862 4.487L19.5 7.125"
+                        stroke="#12132D"
+                        stroke-opacity="0.6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="w-14 h-14 flex items-center justify-center bg-[#f8f8f8] rounded-full tooltip"
+                    data-tip="User"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M16 5.5V8.5M16 8.5V11.5M16 8.5H19M16 8.5H13M10.75 4.375C10.75 5.27011 10.3944 6.12855 9.76149 6.76149C9.12855 7.39442 8.27011 7.75 7.375 7.75C6.47989 7.75 5.62145 7.39442 4.98851 6.76149C4.35558 6.12855 4 5.27011 4 4.375C4 3.47989 4.35558 2.62145 4.98851 1.98851C5.62145 1.35558 6.47989 1 7.375 1C8.27011 1 9.12855 1.35558 9.76149 1.98851C10.3944 2.62145 10.75 3.47989 10.75 4.375ZM1 17.235V17.125C1 15.4342 1.67165 13.8127 2.86719 12.6172C4.06274 11.4216 5.68424 10.75 7.375 10.75C9.06576 10.75 10.6873 11.4216 11.8828 12.6172C13.0784 13.8127 13.75 15.4342 13.75 17.125V17.234C11.8255 18.3931 9.62061 19.0038 7.374 19C5.043 19 2.862 18.355 1 17.234V17.235Z"
+                        stroke="#12132D"
+                        stroke-opacity="0.6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="w-14 h-14 flex items-center justify-center bg-[#f8f8f8] rounded-full tooltip"
+                    data-tip="Discussion"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M3 3V4.5M3 4.5L5.77 3.807C7.8544 3.28605 10.0564 3.52795 11.978 4.489L12.086 4.543C13.9688 5.4843 16.1219 5.73589 18.171 5.254L21.281 4.522C20.9029 8.01155 20.9046 11.5318 21.286 15.021L18.172 15.753C16.1227 16.2354 13.9692 15.9842 12.086 15.043L11.978 14.989C10.0564 14.028 7.8544 13.786 5.77 14.307L3 15M3 4.5V15M3 21V15"
+                        stroke="#12132D"
+                        stroke-opacity="0.6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    class="btn text-white hover:bg-[#6267ff] py-4 px-10 bg-primary rounded-full"
+                    >Sign in</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="navbar-end lg:hidden">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm gap-2 dropdown-content bg-gray-200 right-0 rounded-box z-[1] mt-8 w-52 p-2 shadow"
+              >
+                <li>
+                  <a
+                    class="h-14 flex items-center justify-center bg-[#f8f8f8] rounded-full"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M2.25 12.0001L11.204 3.04507C11.644 2.60607 12.356 2.60607 12.795 3.04507L21.75 12.0001M4.5 9.75007V19.8751C4.5 20.4961 5.004 21.0001 5.625 21.0001H9.75V16.1251C9.75 15.5041 10.254 15.0001 10.875 15.0001H13.125C13.746 15.0001 14.25 15.5041 14.25 16.1251V21.0001H18.375C18.996 21.0001 19.5 20.4961 19.5 19.8751V9.75007M8.25 21.0001H16.5"
+                        stroke="#12132D"
+                        stroke-opacity="0.6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="h-14 flex items-center justify-center bg-[#f8f8f8] rounded-full"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M16.862 4.487L18.549 2.799C18.9007 2.44733 19.3777 2.24976 19.875 2.24976C20.3723 2.24976 20.8493 2.44733 21.201 2.799C21.5527 3.15068 21.7502 3.62766 21.7502 4.125C21.7502 4.62235 21.5527 5.09933 21.201 5.451L6.832 19.82C6.30332 20.3484 5.65137 20.7367 4.935 20.95L2.25 21.75L3.05 19.065C3.26328 18.3486 3.65163 17.6967 4.18 17.168L16.863 4.487H16.862ZM16.862 4.487L19.5 7.125"
+                        stroke="#12132D"
+                        stroke-opacity="0.6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Edit</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="h-14 flex items-center justify-center bg-[#f8f8f8] rounded-full"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <path
+                        d="M16 5.5V8.5M16 8.5V11.5M16 8.5H19M16 8.5H13M10.75 4.375C10.75 5.27011 10.3944 6.12855 9.76149 6.76149C9.12855 7.39442 8.27011 7.75 7.375 7.75C6.47989 7.75 5.62145 7.39442 4.98851 6.76149C4.35558 6.12855 4 5.27011 4 4.375C4 3.47989 4.35558 2.62145 4.98851 1.98851C5.62145 1.35558 6.47989 1 7.375 1C8.27011 1 9.12855 1.35558 9.76149 1.98851C10.3944 2.62145 10.75 3.47989 10.75 4.375ZM1 17.235V17.125C1 15.4342 1.67165 13.8127 2.86719 12.6172C4.06274 11.4216 5.68424 10.75 7.375 10.75C9.06576 10.75 10.6873 11.4216 11.8828 12.6172C13.0784 13.8127 13.75 15.4342 13.75 17.125V17.234C11.8255 18.3931 9.62061 19.0038 7.374 19C5.043 19 2.862 18.355 1 17.234V17.235Z"
+                        stroke="#12132D"
+                        stroke-opacity="0.6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    User</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="h-14 flex items-center justify-center bg-[#f8f8f8] rounded-full"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M3 3V4.5M3 4.5L5.77 3.807C7.8544 3.28605 10.0564 3.52795 11.978 4.489L12.086 4.543C13.9688 5.4843 16.1219 5.73589 18.171 5.254L21.281 4.522C20.9029 8.01155 20.9046 11.5318 21.286 15.021L18.172 15.753C16.1227 16.2354 13.9692 15.9842 12.086 15.043L11.978 14.989C10.0564 14.028 7.8544 13.786 5.77 14.307L3 15M3 4.5V15M3 21V15"
+                        stroke="#12132D"
+                        stroke-opacity="0.6"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    Discussions</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    class="btn text-white hover:bg-[#6267ff] py-4 px-10 bg-primary rounded-full"
+                    >Sign in</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main Section -->
+    <main>
+      <!-- Hero Section -->
+      <section id="hero-section" class="container mx-auto pt-10 px-2">
+        <div
+          class="hero py-16 lg:h-[550px] rounded"
+          style="background-image: url(images/herobanner.png)"
+        >
+          <!-- <div class="hero-overlay bg-opacity-5 rounded"></div> -->
+          <div
+            class="flex-col px-0 md:px-5 md:justify-center md:items-center gap-10 lg:gap-24 md:flex md:flex-row"
+          >
+            <div class="w-full md:w-2/3">
+              <div
+                class="hero-content text-neutral-content text-center md:text-left"
+              >
+                <div class="max-w-md">
+                  <h1
+                    class="mb-5 text-4xl lg:text-6xl font-bold leading-normal"
+                  >
+                    Welcome to the <br />
+                    <!-- <span
+            class="bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent"
+            >Rayeed</span
+          > -->
+                    <span
+                      class="bg-gradient-to-r from-[#df38f5] to-[#4800ffab] bg-clip-text text-transparent"
+                      >Rayeed</span
+                    >
+                    Forum
+                  </h1>
+                  <p class="mb-5">
+                    Share your favorite opinion and win and wp <br />
+                    forum coffee mug!
+                  </p>
+
+                  <label
+                    class="input input-bordered flex items-center justify-between gap-2 pe-0 rounded-full"
+                  >
+                    <input
+                      id="search-input"
+                      type="text"
+                      class="grow text-black placeholder-gray-500 placeholder-opacity-50"
+                      placeholder="Search"
+                    />
+                    <button
+                      id="search-btn"
+                      onclick="searchPostsByCategory()"
+                      class="md:w-28 text-white hover:bg-[#6267ff] btn bg-primary rounded-full"
+                    >
+                      Search
+                    </button>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="text-neutral-content hidden md:flex">
+              <div
+                class="md:w-80 border rounded-2xl p-8 bg-white text-black space-y-4"
+              >
+                <div class="flex justify-between">
+                  <p class="font-semibold">Registered Users</p>
+                  <p>246</p>
+                </div>
+                <div class="flex justify-between">
+                  <p class="font-semibold">Forum</p>
+                  <p>05</p>
+                </div>
+                <div class="flex justify-between">
+                  <p class="font-semibold">Topics</p>
+                  <p>22</p>
+                </div>
+                <div class="flex justify-between">
+                  <p class="font-semibold">Replies</p>
+                  <p>34</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Discuss Section -->
+      <section class="container mx-auto py-12 md:py-16">
+        <!-- Discuss Title -->
+        <div class="text-center space-y-3 px-6">
+          <h2 class="text-4xl font-bold">Let’s Discuss</h2>
+          <p>
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .
+          </p>
+        </div>
+        <!-- Discuss Lists -->
+        <div class="flex flex-col-reverse lg:flex lg:flex-row py-12 px-6 gap-6">
+          <!-- Discuss -->
+          <div
+            id="discuss-container"
+            class="lg:w-9/12 flex flex-col gap-6"
+          ></div>
+          <div
+            id="mark-container"
+            class="w-full lg:w-3/12 p-4 bg-gray-100 rounded-lg space-y-4 min-h-96 self-start lg:sticky lg:top-4"
+          >
+            <div class="flex justify-between">
+              <h3 class="text-xl font-bold">Title</h3>
+              <div class="flex items-center gap-2">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_30_2429)">
+                      <path
+                        d="M7 12L12 17L22 7"
+                        stroke="#3DCE09"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M2 12L7 17M12 12L17 7"
+                        stroke="#3DCE09"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_30_2429">
+                        <rect width="24" height="24" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                <p id="status-title">
+                  Mark as Read (<span id="read-count">0</span>)
+                </p>
+              </div>
+            </div>
+            <div id="markasread-container" class="space-y-2"></div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="text-white body-font m-4 mb-4">
+        <div
+          class="container p-10 md:p-24 mx-auto flex flex-wrap items-center bg-[#12132D] rounded-lg"
+        >
+          <div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
+            <div class="space-y-4 text-center md:text-left">
+              <h3 class="text-4xl font-bold">Join Our Forum</h3>
+              <p>
+                Share your favorite opinion and win and wp forum coffee mug!
+                Yes, you can run unit tests and view the results directly within
+                the app.
+              </p>
+              <button
+                class="text-white hover:bg-[#6267ff] !mt-6 py-4 px-5 md:px-10 bg-primary rounded-full"
+              >
+                Registered Now
+              </button>
+            </div>
+          </div>
+          <div
+            class="w-full lg:w-2/6 md:w-1/2 rounded-lg p-2 lg:p-8 flex flex-col md:ml-auto mt-10 md:mt-0"
+          >
+            <div class="rounded-lg p-4">
+              <img src="images/joinforum.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Post Section -->
+      <section id="latest-post-section" class="container mx-auto mt-16 px-2">
+        <div class="text-center space-y-3 px-6">
+          <h2 class="text-4xl font-bold">Latest Post</h2>
+          <p>
+            Yes, you can run unit tests and view the results directly within the
+            app. The integrated testing features allow for a streamlined .
+          </p>
+        </div>
+        <!-- Post -->
+        <section class="text-gray-600 body-font">
+          <div class="container px-5 py-24 mx-auto">
+            <div id="latest-post-container" class="flex flex-wrap -m-4">
+              <!-- <div class="p-4 md:w-1/3">
+                <div
+                  class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden pb-4"
+                >
+                  <div class="m-5 border rounded-lg overflow-hidden">
+                    <img
+                      class="lg:h-48 md:h-36 w-full object-cover object-center"
+                      src="https://dummyimage.com/720x400"
+                      alt="blog"
+                    />
+                  </div>
+
+                  <div class="px-5">
+                    <div class="flex items-center gap-2 mb-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_29_1881)">
+                          <path
+                            d="M4 7C4 6.46957 4.21071 5.96086 4.58579 5.58579C4.96086 5.21071 5.46957 5 6 5H18C18.5304 5 19.0391 5.21071 19.4142 5.58579C19.7893 5.96086 20 6.46957 20 7V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H6C5.46957 21 4.96086 20.7893 4.58579 20.4142C4.21071 20.0391 4 19.5304 4 19V7Z"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M16 3V7"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M8 3V7"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M4 11H20"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M11 16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16C13 15.7348 12.8946 15.4804 12.7071 15.2929C12.5196 15.1054 12.2652 15 12 15C11.7348 15 11.4804 15.1054 11.2929 15.2929C11.1054 15.4804 11 15.7348 11 16Z"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_29_1881">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <h2
+                        class="tracking-widest text-base title-font font-medium text-gray-400"
+                      >
+                        Date
+                      </h2>
+                    </div>
+
+                    <h1
+                      class="title-font text-lg font-medium text-gray-900 mb-2"
+                    >
+                      The Catalyzer
+                    </h1>
+                    <p class="leading-relaxed mb-3">
+                      Photo booth fam kinfolk cold-pressed sriracha leggings
+                      jianbing microdosing tousled waistcoat.
+                    </p>
+                    <div class="flex items-center gap-x-3 mt-5">
+                      <div class="avatar">
+                        <div class="w-14 rounded-full">
+                          <img
+                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 class="font-bold">Cameron Williamson</h4>
+                        <p>Unknown</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="p-4 md:w-1/3">
+                <div
+                  class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden pb-4"
+                >
+                  <div class="m-5 border rounded-lg overflow-hidden">
+                    <img
+                      class="lg:h-48 md:h-36 w-full object-cover object-center"
+                      src="https://dummyimage.com/720x400"
+                      alt="blog"
+                    />
+                  </div>
+
+                  <div class="px-5">
+                    <div class="flex items-center gap-2 mb-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_29_1881)">
+                          <path
+                            d="M4 7C4 6.46957 4.21071 5.96086 4.58579 5.58579C4.96086 5.21071 5.46957 5 6 5H18C18.5304 5 19.0391 5.21071 19.4142 5.58579C19.7893 5.96086 20 6.46957 20 7V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H6C5.46957 21 4.96086 20.7893 4.58579 20.4142C4.21071 20.0391 4 19.5304 4 19V7Z"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M16 3V7"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M8 3V7"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M4 11H20"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M11 16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16C13 15.7348 12.8946 15.4804 12.7071 15.2929C12.5196 15.1054 12.2652 15 12 15C11.7348 15 11.4804 15.1054 11.2929 15.2929C11.1054 15.4804 11 15.7348 11 16Z"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_29_1881">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <h2
+                        class="tracking-widest text-base title-font font-medium text-gray-400"
+                      >
+                        Date
+                      </h2>
+                    </div>
+
+                    <h1
+                      class="title-font text-lg font-medium text-gray-900 mb-2"
+                    >
+                      The Catalyzer
+                    </h1>
+                    <p class="leading-relaxed mb-3">
+                      Photo booth fam kinfolk cold-pressed sriracha leggings
+                      jianbing microdosing tousled waistcoat.
+                    </p>
+                    <div class="flex items-center gap-x-3 mt-5">
+                      <div class="avatar">
+                        <div class="w-14 rounded-full">
+                          <img
+                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 class="font-bold">Cameron Williamson</h4>
+                        <p>Unknown</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-4 md:w-1/3">
+                <div
+                  class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden pb-4"
+                >
+                  <div class="m-5 border rounded-lg overflow-hidden">
+                    <img
+                      class="lg:h-48 md:h-36 w-full object-cover object-center"
+                      src="https://dummyimage.com/720x400"
+                      alt="blog"
+                    />
+                  </div>
+
+                  <div class="px-5">
+                    <div class="flex items-center gap-2 mb-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <g clip-path="url(#clip0_29_1881)">
+                          <path
+                            d="M4 7C4 6.46957 4.21071 5.96086 4.58579 5.58579C4.96086 5.21071 5.46957 5 6 5H18C18.5304 5 19.0391 5.21071 19.4142 5.58579C19.7893 5.96086 20 6.46957 20 7V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H6C5.46957 21 4.96086 20.7893 4.58579 20.4142C4.21071 20.0391 4 19.5304 4 19V7Z"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M16 3V7"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M8 3V7"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M4 11H20"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M11 16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16C13 15.7348 12.8946 15.4804 12.7071 15.2929C12.5196 15.1054 12.2652 15 12 15C11.7348 15 11.4804 15.1054 11.2929 15.2929C11.1054 15.4804 11 15.7348 11 16Z"
+                            stroke="#12132D"
+                            stroke-opacity="0.6"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_29_1881">
+                            <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <h2
+                        class="tracking-widest text-base title-font font-medium text-gray-400"
+                      >
+                        Date
+                      </h2>
+                    </div>
+
+                    <h1
+                      class="title-font text-lg font-medium text-gray-900 mb-2"
+                    >
+                      The Catalyzer
+                    </h1>
+                    <p class="leading-relaxed mb-3">
+                      Photo booth fam kinfolk cold-pressed sriracha leggings
+                      jianbing microdosing tousled waistcoat.
+                    </p>
+                    <div class="flex items-center gap-x-3 mt-5">
+                      <div class="avatar">
+                        <div class="w-14 rounded-full">
+                          <img
+                            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <h4 class="font-bold">Cameron Williamson</h4>
+                        <p>Unknown</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer>
+      <section class="container mx-auto p-6">
+        <div class="flex flex-col text-center w-full mb-12 gap-5">
+          <h1
+            class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900"
+          >
+            <span class="text-primary font-bold">Rayeed</span> Forum
+          </h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat ab
+            blanditiis soluta culpa voluptate laudantium commodi vitae eaque,
+            similique magnam amet consequatur perferendis non facilis nulla
+            cupiditate ipsa molestiae rerum dolore tempore?
+          </p>
+          <div class="flex justify-center items-center gap-4">
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                ></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                ></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div class="divider"></div>
+          <div class="flex justify-center items-center">
+            <p>2017-2024, All Rights Reserved.</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
